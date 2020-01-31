@@ -13,7 +13,7 @@ public class BankController {
 	private static void start() throws IOException{
 		try {
 			Scanner scanner = new Scanner(System.in);
-			System.out.println("choose bank options:\n1.Add bankDetails\n2.show bankDetails\n3.show menu\n4.Exit");
+			System.out.println("choose bank options:\n1.Add BankDetails\n2.show BankDetails\n3.show TransactionsMenu\n4.Exit");
 			int switchInput = scanner.nextInt();
 			switch(switchInput) {
 				case 1:
@@ -26,7 +26,7 @@ public class BankController {
 					start();
 					break;
 				case 3:
-					BankAccount.showmenu();
+					BankAccount.showTransactionsMenu();
 					start();
 				   break;
 				case 4:
@@ -44,16 +44,16 @@ public class BankController {
 						BankApp bank = new BankApp();
 						@SuppressWarnings("resource")
 						Scanner scanner1 = new Scanner(System.in);
-						System.out.println("enter name");
+						System.out.println("Enter Customer Name");
 						String cName = scanner1.nextLine();
 						bank.setcName(cName);
-						System.out.println("enter gender");
+						System.out.println("Enter Customer Gender");
 						String gender = scanner1.nextLine();
 						bank.setGender(gender);
-						System.out.println("enter id");
+						System.out.println("Enter Customer Id");
 						String id= scanner1.nextLine();
 						bank.setId(id);
-						System.out.println("enter balance");
+						System.out.println("Enter Initial Balance");
 						int balance= scanner1.nextInt();
 						bank.setBalance(balance);
 						scanner1.nextLine();
@@ -83,4 +83,3 @@ public class BankController {
 			
 							}
 }
-	
