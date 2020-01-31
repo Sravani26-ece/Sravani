@@ -1,11 +1,20 @@
 package com.inventrix.bank;
 
+import java.util.Arrays;
+import java.util.List;
+
 public class BankApp {
 
 	private String cName;
 	private String gender;
 	private String id;
 	private int balance;
+	
+	public String toString() {
+		String data = "name:"+this.cName+"gender:"+this.gender+"id:"+this.id+"InitialBalance:"+this.balance;
+		return data;
+		
+	}
 	
 	public String getcName() {
 		return cName;
@@ -31,6 +40,9 @@ public class BankApp {
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
+
+
 	
 
+}
 }
