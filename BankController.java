@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Scanner;
 
 public class BankController {
+	public static int balance1;
 	public static void main(String args[]) throws IOException {
 		
 			System.out.println("WELCOME TO BANK DETAILS");
@@ -26,7 +27,7 @@ public class BankController {
 					start();
 					break;
 				case 3:
-					BankAccount.showTransactionsMenu();
+					BankBo.showTransactionsMenu();
 					start();
 				   break;
 				case 4:
@@ -61,8 +62,8 @@ public class BankController {
 						System.out.println("given input  details are correct or not?press(y or n):");
 						String saveInput = scanner1.nextLine();
 						if(saveInput.equalsIgnoreCase("y")||saveInput.equalsIgnoreCase("yes")) {
-							BankBo movieBo = new BankBo();
-							boolean isStored = movieBo.storeBankDetails(bank);
+							BankBo BankBo = new BankBo();
+							boolean isStored =BankBo.storeBankDetails(bank);
 							if(isStored) {
 								System.out.println("perfectly stored");
 							}
@@ -82,4 +83,8 @@ public class BankController {
 								}
 			
 							}
+
+
+
+			public int balance;
 }
